@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScanQRCode_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giL-9I-nn8">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.71372549019999998" blue="0.94509803920000002" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5df-Zr-Y1c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="giL-9I-nn8" secondAttribute="bottom" id="5L7-he-w1g"/>
+                            <constraint firstItem="giL-9I-nn8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FTN-di-AQL"/>
+                            <constraint firstAttribute="trailing" secondItem="giL-9I-nn8" secondAttribute="trailing" id="xYX-a4-rEK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="output_Label" destination="giL-9I-nn8" id="BdR-09-Joc"/>
+                        <outlet property="webView" destination="4VU-Wp-9lo" id="BbX-IC-VAR"/>
+                        <outlet property="web_View" destination="kmg-cW-0Oa" id="FqV-ey-o4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="kmg-cW-0Oa">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUS-vW-ruC">
+                            <rect key="frame" x="0.0" y="20" width="240" height="44"/>
+                            <items>
+                                <barButtonItem systemItem="cancel" id="W9G-zn-3uS">
+                                    <connections>
+                                        <action selector="webViewCancelButtonPressed:" destination="BYZ-38-t0r" id="1qt-W6-cu3"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VU-Wp-9lo">
+                            <rect key="frame" x="0.0" y="64" width="240" height="64"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                        </webView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4VU-Wp-9lo" secondAttribute="bottom" id="5uQ-aP-K7w"/>
+                        <constraint firstAttribute="trailing" secondItem="iUS-vW-ruC" secondAttribute="trailing" id="A59-zE-g8i"/>
+                        <constraint firstItem="4VU-Wp-9lo" firstAttribute="top" secondItem="iUS-vW-ruC" secondAttribute="bottom" id="OMw-85-e6G"/>
+                        <constraint firstItem="iUS-vW-ruC" firstAttribute="leading" secondItem="kmg-cW-0Oa" secondAttribute="leading" id="YBc-Lm-Zh9"/>
+                        <constraint firstAttribute="trailing" secondItem="4VU-Wp-9lo" secondAttribute="trailing" id="gOg-E4-BYl"/>
+                        <constraint firstItem="4VU-Wp-9lo" firstAttribute="leading" secondItem="kmg-cW-0Oa" secondAttribute="leading" id="pQt-O2-QmR"/>
+                        <constraint firstItem="iUS-vW-ruC" firstAttribute="top" secondItem="kmg-cW-0Oa" secondAttribute="top" constant="20" id="sCN-83-Rj4"/>
+                    </constraints>
+                </view>
+            </objects>
+        </scene>
+    </scenes>
+</document>
