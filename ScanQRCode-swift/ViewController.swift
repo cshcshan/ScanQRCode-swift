@@ -127,7 +127,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
       qrCodeFrameView?.frame = barCodeObject.bounds
       if let metadataString = metadataObject.stringValue {
         self.output_Label.text = metadataString
-        self.openWebView(metadataString)
+        if metadataString.containsString("http://") || metadataString.containsString("https://") {
+          self.openWebView(metadataString)
+        }
       }
     }
   }
